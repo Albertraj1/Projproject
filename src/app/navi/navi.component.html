@@ -1,0 +1,29 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav style="background-color: #0f2836;" #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false" >
+      <div class="c-1">
+      <span class="logos"><img src="" class="logo" style="width: 25%; margin-top: 5%;margin-left: 10%;"  ><h1 class="he">My Book</h1 ></span>
+    </div>
+    <HR>
+    <mat-nav-list style="color: white;">
+      <div class="col">
+      <a mat-list-item routerLink="home">Home</a>
+      <a mat-list-item routerLink="section">Book</a>
+      <a mat-list-item routerLink="about">About</a>
+      <a mat-list-item routerLink="contact">Contact us</a>
+      <a mat-list-item routerLink="signup">Login</a>
+
+</div>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
